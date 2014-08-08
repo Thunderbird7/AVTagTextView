@@ -19,7 +19,7 @@
 
 + (NSRegularExpression *)endOfStringHashtagRegex{
     return [NSRegularExpression
-            regularExpressionWithPattern:@"#(\\w+)$"
+            regularExpressionWithPattern:@"(\\w+)$"
             options:NSRegularExpressionCaseInsensitive
             error:nil];
 }
@@ -39,7 +39,7 @@
     if(self) {
         //TODO: exclude # with a regex
         NSRegularExpression *regex = [NSRegularExpression
-                                      regularExpressionWithPattern:@"#(\\w+)"
+                                      regularExpressionWithPattern:@"(\\w+)"
                                       options:NSRegularExpressionCaseInsensitive
                                       error:nil];
         
